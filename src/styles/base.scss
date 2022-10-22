@@ -40,17 +40,9 @@
   --secondary-color: #ddd;
   --theme-color: #0C365A;
   --active-color: #23cefd;
+  --background-theme-color: #FAFCFF;
 
   --swiper-theme-color: #01d167 !important;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  position: relative;
-  font-weight: normal;
 }
 
 body {

@@ -5,10 +5,10 @@ import NavBar from "../components/NavBar.vue";
 
 <template>
   <div class="home-page">
-    <NavBar />
-    <main class="q-pa-md">
+    <main class="">
       <router-view />
     </main>
+    <NavBar />
   </div>
 </template>
 

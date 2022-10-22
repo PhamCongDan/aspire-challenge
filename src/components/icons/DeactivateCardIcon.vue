@@ -1,45 +1,8 @@
 <template>
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		width="32"
-		height="32"
-		viewBox="0 0 32 32"
-		class="deactivate-card-icon"
-	>
-		<g transform="translate(213 -305)">
-			<circle
-				class="a"
-				cx="16"
-				cy="16"
-				r="16"
-				transform="translate(-213 305)"
-			/>
-			<g transform="translate(-236.222 315)">
-				<path
-					class="b"
-					d="M64.444,138.522a1.925,1.925,0,0,0,1.919,1.927h7.675a1.925,1.925,0,0,0,1.919-1.927v-9.633H64.444Z"
-					transform="translate(-31.259 -126.449)"
-				/>
-				<path
-					class="c"
-					d="M40.861-.037V-1h-3.84v.963h-4.8V2.212H45.661V-.037Z"
-					transform="translate(0 -1)"
-				/>
-			</g>
-		</g>
-	</svg>
-</template>
+  <g>
+    <path fill="#325baf" style="fill: var(--color1, #325baf)" d="M24 12c0 6.627-5.373 12-12 12s-12-5.373-12-12c0-6.627 5.373-12 12-12s12 5.373 12 12z"></path>
+    <path fill="#9ac0fa" style="fill: var(--color2, #9ac0fa)" d="M7.472 16.555c0 0 0 0.001 0 0.002 0 0.796 0.644 1.441 1.439 1.444h5.756c0.795-0.003 1.439-0.648 1.439-1.444 0-0.001 0-0.001 0-0.002v0-7.225h-8.635z"></path>
+    <path fill="#f1f3f4" style="fill: var(--color3, #f1f3f4)" d="M13.229 6.722v-0.722h-2.88v0.722h-3.6v1.687h10.080v-1.687z"></path>
 
-<style lang="scss" scoped>
-.deactivate-card-icon {
-	.a {
-		fill: #325baf;
-	}
-	.b {
-		fill: #9ac0fa;
-	}
-	.c {
-		fill: #f1f3f4;
-	}
-}
-</style>
+  </g>
+</template>

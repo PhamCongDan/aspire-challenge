@@ -32,5 +32,12 @@ export {
   PaymentIcon,
   UserIcon,
   AddIcon,
+  VisaLogo,
+  DeactivateCardIcon,
+  ReplaceCardIcon,
+  GPayIcon,
+  LimitIcon,
+  FreezeIcon,
+  DownArrowIcon,
   BaseIcon,
 };
