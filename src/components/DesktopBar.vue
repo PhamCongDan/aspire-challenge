@@ -11,12 +11,12 @@ import {
 const menu = [
     {
       name: 'Home',
-      path: '/home',
+      path: '/',
       icon: AspireIcon
     },
     {
       name: 'Cards',
-      path: '/',
+      path: '/cards',
       icon: DebitCardIcon,
     },
     {
