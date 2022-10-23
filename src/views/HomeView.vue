@@ -20,6 +20,7 @@ const $q = useQuasar()
   position: relative;
   flex: 1 0 0;
   z-index: 1;
+  min-height: 100%;
 }
 
 .home-page__navbar {
