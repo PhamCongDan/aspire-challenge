@@ -15,12 +15,12 @@ const router = createRouter({
       component: HomeViewVue,
       children: [
         {
-          path: '/cards',
+          path: '/',
           name: 'Cards',
           component: Card
         },
         {
-          path: '/',
+          path: '/home',
           name: 'Home',
           component: Home
         },
