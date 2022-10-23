@@ -39,7 +39,7 @@ import {
 </script>
 <template>
   <div class="mobile fixed-bottom row justify-around q-pa-xs">
-    <router-link :to="item.path" v-for="item in menu" :key="item.name" exact-active-class="active">
+    <router-link v-for="item in menu" :key="item.name" :to="item.path" exact-active-class="active">
       <div class="column items-center q-mx-5">
         <BaseIcon>
           <component :is="item.icon" />

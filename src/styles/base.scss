@@ -59,6 +59,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (min-width: 600px) {
+  body {
+    background: #fff;
+    color: black;
+  }
+}
+
 ::ng-deep .swiper .swiper-pagination-bullet-active {
   width: 20px !important;
   border-radius: 500px !important;

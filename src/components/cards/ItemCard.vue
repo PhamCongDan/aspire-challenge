@@ -65,6 +65,7 @@ const formatCardNumber = (cardNumber: string) => {
   min-height: 220px;
   border-radius: 15px;
   position: relative;
+  color: white;
   background: var(--primary-color);
 }
 

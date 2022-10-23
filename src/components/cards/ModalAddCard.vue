@@ -5,7 +5,6 @@ import { useCardStore } from '@/stores/card'
 const props = defineProps<{
   isOpen: boolean
 }>()
-
 const emit = defineEmits(['update:isOpen']);
 
 const cardName = ref('')
@@ -29,7 +28,6 @@ const createCard = () => {
   addNewCard(cardName.value.trim())
   closeModal()
 }
-
 </script>
 
 <template>
