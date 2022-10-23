@@ -15,7 +15,7 @@ export default defineConfig({
       '@/views': resolve(__dirname, './src/views'),
       '@/store': resolve(__dirname, './src/store'),
       '@/router': resolve(__dirname, './src/router'),
-      
+      '@/@type': resolve(__dirname, './src/@type')
     }
   }
 })

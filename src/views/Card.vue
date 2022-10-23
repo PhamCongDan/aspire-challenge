@@ -1,16 +1,20 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
+import { useCardStore } from '@/stores/card'
 import InfoCard from "../components/cards/InfoCard.vue";
 import ActionCard from "../components/cards/ActionCard.vue";
 
+const { getLstCard } = useCardStore()
+
 const heightEle = ref(0)
 
-onMounted(() => {
+onMounted(async () => {
+  await getLstCard();
   const infoEl = document.getElementsByClassName('info-section') as HTMLCollectionOf<HTMLDivElement>  
   heightEle.value = infoEl[0]['offsetHeight']
-  
 });
+
 </script>
 <template>
   <div class="relative-position">

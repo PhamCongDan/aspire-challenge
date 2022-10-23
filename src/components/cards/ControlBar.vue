@@ -1,5 +1,7 @@
 
 <script setup lang="ts">
+import { ref } from "vue";
+import { storeToRefs } from "pinia";
 import {
   BaseIcon,
   FreezeIcon,
@@ -8,31 +10,49 @@ import {
   ReplaceCardIcon,
   DeactivateCardIcon,
 } from "@/components/icons";
+import { useCardStore } from '@/stores/card'
+
+const { activeIndexCard, lstCard } = storeToRefs(useCardStore())
+const { freezeCard, unfreezeCard, removeCard } = useCardStore()
+
+const changeStatusCard = () => {
+  if (lstCard.value[activeIndexCard.value].active) {
+    freezeCard(activeIndexCard.value)
+  } else {
+    unfreezeCard(activeIndexCard.value)
+  }
+}
+
 const actions = [
   {
     icon: FreezeIcon,
     name: 'Freeze card',
-    action: () => console.log('freeze method')
+    type: 'freeze',
+    action: () => changeStatusCard()
   },
   {
     icon: LimitIcon,
     name: 'Set spend limit',
+    type: 'set_spend_limit',
     action: () => console.log('spend method'),
   },
   {
     icon: GPayIcon,
     name: 'Add to GPay',
+    type: 'add_gpay',
     action: () => console.log('add gpay method')
   },
   {
     icon: ReplaceCardIcon,
     name: 'Replace card',
+    type: 'replace',
     action: () => console.log('replace method')
   },
   {
     icon: DeactivateCardIcon,
     name: 'Cancel card',
-    action: () => console.log('cancel method')
+    type: 'cancel',
+    action: () => removeCard(activeIndexCard.value)
   },
 ]
 </script>
@@ -44,7 +64,8 @@ const actions = [
         <BaseIcon :width="32" :height="32">
           <component :is="item.icon" />
         </BaseIcon>
-        <div class="control-bar__name">{{ item.name }}</div>
+        <div v-if="item.type === 'freeze'" class="control-bar__name">{{ lstCard[activeIndexCard]?.active ? 'Freeze card' : 'Unfreeze card' }}</div>
+        <div v-else class="control-bar__name">{{ item.name }}</div>
       </div>
     </div>
   </div>

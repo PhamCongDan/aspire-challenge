@@ -8,6 +8,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 import './styles/main.scss'
 import 'quasar/src/css/index.sass'
+import '@quasar/extras/material-icons/material-icons.css'
 import 'swiper/css'
 import 'swiper/css/pagination';
 

@@ -1,11 +1,27 @@
 <script setup lang="ts">
-import { ref } from "vue";
-import { Pagination } from 'swiper'
-import { BaseIcon, AspireIcon, AddIcon } from "../icons";
+import { onMounted, ref } from "vue";
+import { Pagination } from "swiper";
+import { useCardStore } from "@/stores/card";
+import { BaseIcon, AspireIcon, AddIcon } from "@/components/icons";
 import ItemCard from "./ItemCard.vue";
+import { storeToRefs } from "pinia";
+import ModalAddCard from "./ModalAddCard.vue";
 
-const tab = ref('debit-card')
-const modules = ref([Pagination])
+const { lstCard } = storeToRefs(useCardStore());
+const tab = ref("debit-card");
+const modules = ref([Pagination]);
+const isOpenAddCardModal = ref(false)
+
+const { addNewCard, changeActiveCard } = useCardStore();
+
+const createCard = () => {
+  isOpenAddCardModal.value = true
+};
+
+const onSlideChange = (e) => {
+  changeActiveCard(e.realIndex)
+}
+
 </script>
 
 <template>
@@ -22,7 +38,7 @@ const modules = ref([Pagination])
           <div class="info-card__amount__icon">S$</div>
           <span class="info-card__amount__value">3,000</span>
         </div>
-        <div class="info-card__button">
+        <div class="info-card__button" @click="createCard">
           <div class="info-card__button__icon">
             <BaseIcon :width="16" :height="16">
               <AddIcon />
@@ -44,38 +60,49 @@ const modules = ref([Pagination])
               :align="`left`"
               narrow-indicator
             >
-              <q-tab name="debit-card" class="info-card__tab--title" label="My debit cards" />
-              <q-tab name="company-card" class="info-card__tab--title" label="All company cards" />
+              <q-tab
+                name="debit-card"
+                class="info-card__tab--title"
+                label="My debit cards"
+              />
+              <q-tab
+                name="company-card"
+                class="info-card__tab--title"
+                label="All company cards"
+              />
             </q-tabs>
-  
+
             <q-separator />
-  
+
             <q-tab-panels v-model="tab" animated class="info-card__tab--panels">
               <q-tab-panel name="debit-card" class="q-px-none">
                 <!-- swiper START -->
-                <swiper :space-between="50" class="swiper-main" :modules="modules" :pagination="{ clickable: true }">
-                  <swiper-slide class="q-pb-xl">
-                    <ItemCard />
-                  </swiper-slide >
-                  <swiper-slide class="q-pb-xl">
-                    <ItemCard />
-                  </swiper-slide>
-                  <swiper-slide class="q-pb-xl">
-                    <ItemCard />
+                <swiper
+                  :space-between="50"
+                  class="swiper-main"
+                  :modules="modules"
+                  :pagination="{ clickable: true }"
+                  @afterInit="(e) => onSlideChange(e)"
+                  @slideChangeTransitionEnd="(e) => onSlideChange(e)"
+                >
+                  <swiper-slide
+                    class="q-pb-xl"
+                    v-for="item in lstCard"
+                    :key="item.id"
+                  >
+                    <ItemCard :data="item" />
                   </swiper-slide>
                 </swiper>
                 <!-- swiper END -->
               </q-tab-panel>
-  
-              <q-tab-panel name="company-card">
-                coming soon!
-              </q-tab-panel>
-  
+
+              <q-tab-panel name="company-card"> coming soon! </q-tab-panel>
             </q-tab-panels>
           </q-card>
         </div>
       </div>
     </div>
+    <ModalAddCard v-model:isOpen="isOpenAddCardModal" />
   </div>
 </template>
 
@@ -132,8 +159,6 @@ const modules = ref([Pagination])
   background: inherit !important;
 }
 
-
-
 .info-card {
   &__tab {
     background: inherit;
@@ -145,7 +170,6 @@ const modules = ref([Pagination])
       background: inherit !important;
     }
   }
-  
 }
 
 .swiper-main {
@@ -153,7 +177,7 @@ const modules = ref([Pagination])
   max-width: 400px;
 }
 .swiper-main :deep() .swiper-pagination-bullet-active {
- width: 16px;
- border-radius: 500px;
+  width: 16px;
+  border-radius: 500px;
 }
 </style>

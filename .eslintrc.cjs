@@ -13,6 +13,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     "parser": "babel-eslint",
+    ecmaVersion: 6
   },
   rules: {
     "prettier/prettier": [
