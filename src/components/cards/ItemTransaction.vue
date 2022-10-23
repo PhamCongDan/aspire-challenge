@@ -27,7 +27,7 @@ const props = defineProps({
   },
 });
 
-const iconType = {
+const iconType: any = {
   storage: {
     color: "#009DFF1A",
     icon: FileStorageIcon,
