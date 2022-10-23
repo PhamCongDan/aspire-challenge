@@ -1,38 +1,7 @@
 <template>
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		width="16"
-		height="15.205"
-		viewBox="0 0 16 15.205"
-		class="file-storage-icon"
-	>
-		<g transform="translate(0 -11.008)">
-			<g transform="translate(0.798 15.853)">
-				<g transform="translate(0 0)">
-					<path
-						class="a"
-						d="M22.016,146.176v9.766a.6.6,0,0,0,.592.594h13.2a.6.6,0,0,0,.592-.594v-9.766Zm10.188,3.75a.6.6,0,0,1-.592.594H26.8a.6.6,0,0,1-.592-.594V148.72a.6.6,0,0,1,.592-.594h4.807a.6.6,0,0,1,.592.594Z"
-						transform="translate(-22.016 -146.176)"
-					/>
-				</g>
-			</g>
-			<g transform="translate(0 11.008)">
-				<g transform="translate(0 0)">
-					<path
-						class="a"
-						d="M15.39,11.008H.592A.6.6,0,0,0,0,11.6v3.509H16v-3.49A.617.617,0,0,0,15.39,11.008Z"
-						transform="translate(0 -11.008)"
-					/>
-				</g>
-			</g>
-		</g>
-	</svg>
-</template>
+	<g>
+    <path fill="#009dff" style="fill: var(--color3, #009dff)" d="M1.712 8.010v14.13c0.005 0.472 0.385 0.853 0.856 0.859h19.1c0.471-0.006 0.852-0.388 0.857-0.859v-14.131zM16.453 13.436c-0.005 0.472-0.385 0.853-0.856 0.859h-6.963c-0.471-0.006-0.852-0.388-0.857-0.859v-1.745c0.005-0.472 0.385-0.853 0.856-0.859h6.956c0.471 0.006 0.852 0.388 0.857 0.859v0z"></path>
+    <path fill="#009dff" style="fill: var(--color3, #009dff)" d="M22.825 1h-21.411c-0.47 0.006-0.85 0.386-0.857 0.856v5.078h23.15v-5.050c-0.005-0.486-0.397-0.878-0.882-0.884h-0.001z"></path>
 
-<style lang="scss" scoped>
-	.file-storage-icon {
-		.a {
-			fill: #009dff;
-		}
-	}
-</style>
+  </g>
+</template>

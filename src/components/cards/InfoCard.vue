@@ -9,19 +9,16 @@ import ModalAddCard from "./ModalAddCard.vue";
 import SwiperCard from "./SwiperCard.vue";
 import ControlBar from "./ControlBar.vue";
 import CardDetailsPanel from "./CardDetailsPanel.vue";
+import RecentTransactionPanel from "./RecentTransactionPanel.vue";
 
 const $q = useQuasar()
 const { lstCard } = storeToRefs(useCardStore());
 const tab = ref("debit-card");
-// const modules = ref([Pagination]);
 const isOpenAddCardModal = ref(false)
-
-const { addNewCard, changeActiveCard } = useCardStore();
 
 const createCard = () => {
   isOpenAddCardModal.value = true
 };
-
 
 </script>
 
@@ -29,13 +26,13 @@ const createCard = () => {
   <div :class="$q.screen.xs ? 'fixed' : 'relative-position'">
     <div class="info-card relative-position">
       <div class="row justify-between">
-        <div class="text-subtitle2">Account Balance</div>
+        <div class="text-subtitle2" :class="$q.screen.xs ? 'text-white' : 'text-black'" >Account Balance</div>
         <BaseIcon v-if="$q.screen.xs" icon-color="var(--primary-color)">
           <AspireIcon />
         </BaseIcon>
       </div>
       <div class="row justify-between q-mt-sm">
-        <div class="info-card__amount">
+        <div class="info-card__amount" :class="$q.screen.xs ? 'text-white' : 'text-black'">
           <div class="info-card__amount__icon">S$</div>
           <span class="info-card__amount__value">3,000</span>
         </div>
@@ -51,7 +48,7 @@ const createCard = () => {
       <!-- tab -->
       <div class="q-pt-md">
         <div class="">
-          <q-card class="info-card__tab">
+          <q-card class="info-card__tab" :class="$q.screen.xs ? 'text-white' : 'text-black'">
             <q-tabs
               v-model="tab"
               dense
@@ -83,6 +80,7 @@ const createCard = () => {
                     </div>
                     <div class="col-6 q-pl-md">
                       <CardDetailsPanel />
+                      <RecentTransactionPanel class="q-mt-lg" />
                     </div>
                   </div>
                 </q-card>
@@ -95,7 +93,7 @@ const createCard = () => {
         </div>
       </div>
     </div>
-    <ModalAddCard v-model:isOpen="isOpenAddCardModal" />
+    <ModalAddCard v-model:dialog="isOpenAddCardModal" />
   </div>
 </template>
 

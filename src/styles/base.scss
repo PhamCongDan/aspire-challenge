@@ -33,8 +33,6 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
-  --color-theme-text: #fff; 
-
   --section-gap: 160px;
   --primary-color: #01d167;
   --secondary-color: #ddd;
@@ -48,7 +46,7 @@
 
 body {
   min-height: 100vh;
-  color: var(--color-theme-text);
+  color: var(--vt-c-text-light-1);
   background: var(--theme-color);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
@@ -66,7 +64,10 @@ body {
   }
 }
 
-::ng-deep .swiper .swiper-pagination-bullet-active {
-  width: 20px !important;
-  border-radius: 500px !important;
+.text-white {
+  color: var(--vt-c-white);
+}
+
+.text-black {
+  color: var(--vt-c-black-soft)
 }

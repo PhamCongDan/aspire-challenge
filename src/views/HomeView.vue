@@ -37,7 +37,6 @@ const $q = useQuasar()
 @media (min-width: 600px) {
   .home-page {
     display: flex;
-    height: 100%;
   }
   .home-page__main {
     background: white;

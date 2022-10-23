@@ -22,7 +22,7 @@ const hiddenCardNumber = computed(() => {
 
 const formatCardNumber = (cardNumber: string) => {
   let result = ''
-  if (cardNumber.length !== 16) return 0;
+  if (cardNumber.length !== 16) return '•••• •••• •••• ••••';
   if (cardNumber.length > 4) result += cardNumber.slice(0, 4);
   if (cardNumber.length > 8) result += ` ${cardNumber.slice(4, 8)}`
   if (cardNumber.length > 12) result += ` ${cardNumber.slice(8, 12)}`

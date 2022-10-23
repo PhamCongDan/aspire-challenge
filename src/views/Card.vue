@@ -38,7 +38,6 @@ onMounted(async () => {
 }
 
 .action-section {
-  height: 1000px;
   position: relative;
   z-index: 1;
   background: white;

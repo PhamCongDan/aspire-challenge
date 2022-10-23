@@ -6,17 +6,13 @@ import { useCardStore } from "@/stores/card";
 import ItemCard from "./ItemCard.vue";
 
 const { lstCard } = storeToRefs(useCardStore());
-const {  changeActiveCard } = useCardStore();
+const { changeActiveCard } = useCardStore();
 const modules = ref([Pagination]);
 
 const onSlideChange = (e: any) => {
   changeActiveCard(e.realIndex)
 }
 
-onMounted(() => {
-  console.log(123);
-  
-})
 </script>
 <template>
   <swiper
@@ -37,4 +33,5 @@ onMounted(() => {
   width: 16px;
   border-radius: 500px;
 }
+
 </style>

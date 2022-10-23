@@ -4,7 +4,6 @@ import MobileBar from './MobileBar.vue'
 import DesktopBar from './DesktopBar.vue'
 
 const $q = useQuasar()
-console.log($q.screen.xs)
 </script>
 <template>
   <div class="navbar">

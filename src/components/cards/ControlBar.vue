@@ -78,17 +78,21 @@ const actions = [
   background: #EDF3FF;
 }
 
-@media (min-width: 600px) {
-  .control-bar {
-    border-radius: 15px;
-  }
-}
-
-
 .control-bar__name {
   white-space: break-spaces;
   text-align: center;
   color: var(--theme-color);
   font-size: 12px;
 }
+
+@media (min-width: 600px) {
+  .control-bar {
+    border-radius: 15px;
+  }
+
+  .control-bar__name {
+    font-size: 14px;
+  }
+}
+
 </style>

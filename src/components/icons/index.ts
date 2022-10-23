@@ -1,12 +1,9 @@
 import AspireIcon from './AspireIcon.vue';
-import AspireLogo from './AspireIcon.vue';
-import AspireLogoWhite from './AspireLogoWhite.vue';
 import PaymentIcon from './PaymentIcon.vue';
 import DebitCardIcon from './DebitCardIcon.vue';
 import CreditIcon from './CreditIcon.vue';
 import FreezeIcon from './FreezeIcon.vue';
 import LimitIcon from './LimitIcon.vue';
-import AccountIcon from './AccountIcon.vue';
 import UserIcon from './UserIcon.vue';
 import AddIcon from './AddIcon.vue';
 import CardSmallIcon from './CardSmallIcon.vue';
@@ -39,5 +36,12 @@ export {
   LimitIcon,
   FreezeIcon,
   DownArrowIcon,
+  CardDetailIcon,
+  MegaPhoneIcon,
+  FileStorageIcon,
+  FlightIcon,
+  CardSmallIcon,
+  TransactionIcon,
+  NextArrowIcon,
   BaseIcon,
 };

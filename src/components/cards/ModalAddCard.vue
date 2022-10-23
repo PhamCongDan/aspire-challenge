@@ -2,24 +2,28 @@
 import { computed, ref } from "vue";
 import { useCardStore } from '@/stores/card'
 
+type Emit = {
+  (event: 'update:dialog', value: boolean): void
+}
 const props = defineProps<{
-  isOpen: boolean
+  dialog: boolean
 }>()
-const emit = defineEmits(['update:isOpen']);
+
+const emit = defineEmits<Emit>();
 
 const cardName = ref('')
-const open = computed({
+const isOpen = computed({
   get() {
-    return props.isOpen
+    return props.dialog
   },
   set(newValue: boolean) {
-    emit('update:isOpen', newValue)
+    emit('update:dialog', newValue)
   }
 })
 const { addNewCard } = useCardStore()
 
 const closeModal = () => {
-  open.value = false
+  isOpen.value = false
   cardName.value = ''
 }
 
@@ -31,7 +35,7 @@ const createCard = () => {
 </script>
 
 <template>
-  <q-dialog v-model="open" persistent>
+  <q-dialog v-model="isOpen" persistent>
     <q-card style="min-width: 350px">
       <q-card-section>
         <div class="text-h6 title-modal">Add New Card</div>
