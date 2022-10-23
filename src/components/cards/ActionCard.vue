@@ -17,7 +17,7 @@ import RecentTransactionPanel from "./RecentTransactionPanel.vue";
 
 <style lang="scss" scoped>
 .action-card {
-  padding-bottom: 50px;
+  padding-bottom: 75px;
   height: auto;
   background: white;
   border-radius: 30px 30px 0 0;

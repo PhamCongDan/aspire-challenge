@@ -21,7 +21,7 @@ onMounted(async () => {
 
 </script>
 <template>
-  <div class="relative-position">
+  <div class="relative-position overflow-hidden">
     <InfoCard class="info-section" />
     <ActionCard v-if="$q.screen.xs" class="action-section" :style="{ 'margin-top': `${heightEle}px` }"/>
   </div>
