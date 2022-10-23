@@ -7,18 +7,6 @@ import {
   MegaPhoneIcon,
   CardSmallIcon
 } from "@/components/icons";
-import { computed } from "vue";
-
-// type TransactionData = {
-//   id: number,
-//   icon: string,
-//   type: string,
-//   name: string,
-//   date: string,
-//   status: string,
-//   amount: number,
-//   currency: string,
-// }
 
 const props = defineProps({
   transactionData: {

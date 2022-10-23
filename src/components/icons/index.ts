@@ -14,7 +14,6 @@ import FlightIcon from './FlightIcon.vue';
 import GPayIcon from './GPayIcon.vue';
 import MegaPhoneIcon from './MegaPhoneIcon.vue';
 import NextArrowIcon from './NextArrowIcon.vue';
-import PickupCarIcon from './PickupCarIcon.vue';
 import RemovedEyeIcon from './RemovedEyeIcon.vue';
 import ReplaceCardIcon from './ReplaceCardIcon.vue';
 import TransactionIcon from './TransactionIcon.vue';
@@ -43,5 +42,6 @@ export {
   CardSmallIcon,
   TransactionIcon,
   NextArrowIcon,
+  RemovedEyeIcon,
   BaseIcon,
 };
