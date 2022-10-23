@@ -16,6 +16,7 @@ module.exports = {
     ecmaVersion: 6
   },
   rules: {
+    "noImplicitAny": false,
     "prettier/prettier": [
       "error",
       {

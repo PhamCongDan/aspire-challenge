@@ -9,7 +9,7 @@ const { lstCard } = storeToRefs(useCardStore());
 const {  changeActiveCard } = useCardStore();
 const modules = ref([Pagination]);
 
-const onSlideChange = (e) => {
+const onSlideChange = (e: any) => {
   changeActiveCard(e.realIndex)
 }
 
@@ -24,8 +24,8 @@ onMounted(() => {
     class="swiper-main"
     :modules="modules"
     :pagination="{ clickable: true }"
-    @afterInit="(e) => onSlideChange(e)"
-    @slideChangeTransitionEnd="(e) => onSlideChange(e)"
+    @afterInit="(e: any) => onSlideChange(e)"
+    @slideChangeTransitionEnd="(e: any) => onSlideChange(e)"
   >
     <swiper-slide class="q-pb-xl" v-for="item in lstCard" :key="item.id">
       <ItemCard :data="item" />
