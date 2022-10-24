@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-// import { Pagination } from "swiper";
 import { useQuasar } from 'quasar'
 import { useCardStore } from "@/stores/card";
 import { storeToRefs } from "pinia";
