@@ -1,7 +1,7 @@
 # aspire-technical-challenge
 
-This is technical challenge which is made by Pham Cong Dan. In this project, I have created layout follow the design (support Mobile and Desktop). Some framework used: Vue 3, Pinia, Typescript, Quasar, Unit testing with Vitest
-Live version is [here](https://aspire-challenge-phamcongdan.vercel.app/)
+This is technical challenge which is made by Pham Cong Dan. In this project, I have created layout follow the design (support Mobile and Desktop). Some framework used: Vue 3, Pinia, Typescript, Quasar, Unit testing with Vitest.
+<p>Live version is [here](https://aspire-challenge-phamcongdan.vercel.app/)</p>
 
 ## Recommended IDE Setup
 
