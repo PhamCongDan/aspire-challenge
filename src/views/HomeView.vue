@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { useQuasar } from 'quasar'
 import NavBar from "../components/NavBar.vue";
-
-const $q = useQuasar()
 
 </script>
 

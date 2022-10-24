@@ -17,5 +17,8 @@ export default defineConfig({
       '@/router': resolve(__dirname, './src/router'),
       '@/@type': resolve(__dirname, './src/@type')
     }
-  }
+  },
+  test: {
+    environment: 'happy-dom',
+  },
 })
