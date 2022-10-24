@@ -40,7 +40,9 @@ const formatCardNumber = (cardNumber: string) => {
       <BaseIcon :height="16" :width="16">
         <RemovedEyeIcon />
       </BaseIcon>
-      <div class="q-pl-xs">Show card number</div>
+      <div class="q-pl-xs">
+        {{ !isShowInfo ? 'Show': 'Hide' }} card number
+      </div>
     </div>
   </div>
   <div class="payment-card" :class="{ 'payment-card--disabled': !data.active }">
