@@ -94,6 +94,7 @@ const { transactionData } = props;
 .transaction-item__circle-content {
   width: max-content;
   height: min-content;
+  line-height: 0;
 }
 
 .transaction-item--value {
@@ -125,5 +126,6 @@ const { transactionData } = props;
 .transaction-item__circle-small-content {
   width: max-content;
   height: min-content;
+  line-height: 0;
 }
 </style>
