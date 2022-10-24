@@ -6,23 +6,7 @@ import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue({
-    template: {
-      compilerOptions: {
-        isCustomElement: (tag) => [
-          'q-card-section',
-          'q-input',
-          'q-btn',
-          'q-card-actions',
-          'q-card',
-          'q-dialog',
-          'swiper',
-          'swiper-slide',
-          'q-separator'
-        ].includes(tag),
-      }
-    }
-  })],
+  plugins: [vue()],
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
